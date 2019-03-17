@@ -99,6 +99,8 @@ int OptData::amountProcessed(int i, int j, string r){
 
 void OptData::findPossibleSolutions(){
     amountProcessed(0,0,"");
+    traceback();
+    outputOptimalSolution();
 
     // PRINT DEBUG
 //    for(auto kv: traverseValues){

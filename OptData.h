@@ -21,12 +21,12 @@ public:
     void printDataProcessed();
 
     void findPossibleSolutions();
-    int amountProcessed(int i, int j, string r);
-    void traceback();
-
-    void outputOptimalSolution();
 
 private:
+    int amountProcessed(int i, int j, string r);
+    void traceback();
+    void outputOptimalSolution();
+
     void fillTable();
     int days;
 
