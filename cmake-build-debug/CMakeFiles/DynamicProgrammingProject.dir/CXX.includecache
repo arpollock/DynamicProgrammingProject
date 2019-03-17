@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.cpp
-OptData.h
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.h
-
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.h
+D:/Dropbox/C++/DynamicProgrammingProject/OptData.h
 vector
 -
 algorithm
@@ -19,4 +15,18 @@ iomanip
 -
 iostream
 -
+fstream
+-
+string
+-
+map
+-
+
+D:/Dropbox/C++/DynamicProgrammingProject/main.cpp
+iostream
+-
+vector
+-
+OptData.h
+D:/Dropbox/C++/DynamicProgrammingProject/OptData.h
 

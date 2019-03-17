@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.cpp" "/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o"
-  "/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/main.cpp" "/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles/DynamicProgrammingProject.dir/main.cpp.o"
+  "D:/Dropbox/C++/DynamicProgrammingProject/OptData.cpp" "D:/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.obj"
+  "D:/Dropbox/C++/DynamicProgrammingProject/main.cpp" "D:/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles/DynamicProgrammingProject.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

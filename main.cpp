@@ -20,8 +20,11 @@ int main() {
     s.push_back(2);
     s.push_back(1);
 
-    OptData test(days, x, s);
-    test.printDataProcessed();
+    OptData easyTest(days, x, s);
+    //easyTest.printDataProcessed();
+    easyTest.findPossibleSolutions();
+    easyTest.traceback();
+    easyTest.outputOptimalSolution();
 
 
     return 0;

@@ -10,19 +10,31 @@
 #include <iomanip>
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <map>
+
 using namespace std;
 
 class OptData{
 public:
     OptData(int days, vector<int> dayData, vector<int> sinceReboot);
     void printDataProcessed();
+
+    void findPossibleSolutions();
+    int amountProcessed(int i, int j, string r);
+    void traceback();
+
     void outputOptimalSolution();
+
 private:
     void fillTable();
     int days;
+
     vector< vector<int> > dataProcessed;
     vector<int> dayData;
     vector<int> sinceReboot;
+
+    map<string,int> traverseValues;
 
     vector<int> optimalSolution;
 
