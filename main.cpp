@@ -57,6 +57,23 @@ int main() {
     //printDataProcessed(impDays, impX, impS);
     DPSolution impTest(impX, impS);
     impTest.findOptimalRebootSchedule();
+    cout<<endl;
+
+    // two reboot test case
+    vector<int> twoX;
+    twoX.push_back(10);
+    twoX.push_back(10);
+    twoX.push_back(10);
+    twoX.push_back(10);
+    twoX.push_back(10);
+    vector<int> twoS;
+    twoS.push_back(100);
+    twoS.push_back(4);
+    twoS.push_back(3);
+    twoS.push_back(2);
+    twoS.push_back(1);
+    DPSolution twoTest(twoX, twoS);
+    twoTest.findOptimalRebootSchedule();
 
 
     return 0;

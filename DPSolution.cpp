@@ -15,7 +15,6 @@ void DPSolution::findOptimalRebootSchedule(){
     int maxDataProc = recursiveFindMax(dayData.size());
     cout << maxDataProc << endl;
     traceback();
-    return;
 }
 
 int DPSolution::recursiveFindMax(int days){
@@ -25,7 +24,6 @@ int DPSolution::recursiveFindMax(int days){
 
     int maxData = 0;
     int rebootOn = 0;
-
     for(int i = 0; i <= days; i++){
         int currVal = sumDaysLeft(i, days);
 
@@ -42,9 +40,11 @@ int DPSolution::recursiveFindMax(int days){
     } // end for loop
 
     if( rebootOn != 0 ){
-        // rebootDays.clear();
+        // rebootDays.clear(); // UNCOMMENT THIS LINE TO GET CORRECT SOLUTION
+        // no clear gets right solution for two reboot case, clear gets right solution for implementation case
+        // overall solution will come from identifying when a reboot is needed and when it isnt AFTER it is inserted (?)
         // clearing gets the right answer but I don't think it's right
-        // will fail when opt solution is more than one reboot or right reboot comes first
+        // will fail when opt solution is more than one reboot
         rebootDays.insert(rebootOn);
     }
 
@@ -61,11 +61,11 @@ int DPSolution::sumDaysLeft(int lastRebootDayNum, int totDays){
 }
 
 void DPSolution::traceback(){
-    cout << "Reboot days: ";
-    for(int ele: rebootDays){
-        cout << ele << " " ;
-    }
-    cout << endl;
+//    cout << "Reboot days: ";
+//    for(int ele: rebootDays){
+//        cout << ele << " " ;
+//    }
+//    cout << endl;
 
     int j = 0;
     for( int i = 0; i<dayData.size(); i++){
@@ -79,6 +79,4 @@ void DPSolution::traceback(){
         cout << dataProc << " ";
     }
     cout << endl;
-
-
 }
