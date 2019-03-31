@@ -15,6 +15,11 @@
 
 using namespace std;
 
+void printDataProcessed(int day, vector<int> inputDayData, vector<int> inputSinceReboot);
+void findOptimalRebootSchedule(int days, vector<int> dayData, vector<int> rebootData);
+int recursiveFindMax(int days, vector<int> dayData, vector<int> rebootData);
+int sumDaysLeft(int lastRebootDayNum, int totDays, vector<int> dayData, vector<int> rebootData);
+
 class OptData{
 public:
     OptData(int days, vector<int> dayData, vector<int> sinceReboot);

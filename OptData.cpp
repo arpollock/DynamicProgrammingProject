@@ -4,6 +4,139 @@
 
 #include "OptData.h"
 
+void findOptimalRebootSchedule(int days, vector<int> dayData, vector<int> rebootData){
+    int dataProcessed = recursiveFindMax(days, dayData, rebootData);
+    cout << "*-*-*-*-*-*-*-*-*" <<endl;
+    cout << dataProcessed << endl;
+    cout << "*-*-*-*-*-*-*-*-*" <<endl;
+    return;
+}
+
+int recursiveFindMax(int days, vector<int> dayData, vector<int> rebootData){
+    if( days == 0 ){ // cannot process data on the 0th days
+        return 0;
+    }
+
+    int maxData = 0;
+    for(int i = 0; i <= days; i++){
+
+        int currVal = recursiveFindMax(i-1, dayData, rebootData) + sumDaysLeft(i, days, dayData, rebootData);
+        if(currVal > maxData){
+            maxData = currVal;
+        }
+
+    }
+    return maxData;
+}
+
+int sumDaysLeft(int lastRebootDayNum, int totDays, vector<int> dayData, vector<int> rebootData){
+    int totDataProc = 0;
+    for(int j = lastRebootDayNum+1; j<=totDays; j++){
+        totDataProc += min( dayData.at(j-1), rebootData.at(j-lastRebootDayNum-1) );
+    }
+    return totDataProc;
+}
+
+void printDataProcessed(int days, vector<int> inputDayData, vector<int> inputSinceReboot){
+
+    vector<int> dayData;
+    vector<int> sinceReboot;
+    sinceReboot.push_back(0);
+    dayData.push_back(0);
+
+    for(int i=1; i<=days;i++){
+        dayData.push_back( inputDayData.at(i-1));
+
+        sinceReboot.push_back( inputSinceReboot.at(i-1));
+        cout<<" i: "<<i<<"   "<<dayData[i]<<"  "<<sinceReboot[i]<<endl;
+    }
+
+    //For the base case
+    vector<int> optRow(days+1,0);
+    vector<vector<int>> optSolution(days+1,optRow);
+
+    // Opt Solution for a day is the previous day + data processed that day
+    for (int i = 1; i <= days; i++){
+        for (int j = 1; j <= days; j++){
+            optSolution[i][j] = optSolution[j - 1][i - 1] + min(dayData[i],sinceReboot[j]); // Recurrence relation (O(n^2))
+        }
+    }
+
+
+
+    for(int i=1; i<=days; i++){
+        int value;
+        int compare;
+        vector<int> values;
+
+
+        for(int k =1; k<=i-1;k++){
+            values = optSolution[i-1];
+
+            if(compare < values[k]){
+                compare = values[k];
+                optSolution[i][0] = compare;
+                //       cout<< "value k is :"<<values[k]<<"    ";
+            }
+            //      cout<<endl;
+            //        cout<<"value compare: "<<compare<<endl;
+        }
+        //        cout<<"test value size "<< values.size()<<endl;
+        vector<int> col;
+
+        for(int j=1;j<=i;j++){
+            value = optSolution[i-1][j-1];
+
+            // cout<<"   this is i-1,j-1:  " <<optSolution[i-1][j-1] <<endl;
+            // col.push_back(max(compare,min(dayData[i],sinceReboot[j])+value));
+
+            optSolution[i][j] =  max(optSolution[i][0],min(dayData[i],sinceReboot[j])+value);
+            cout<< "This is the function optSolution: "<<optSolution[i][j] <<endl;//max(compare,min(dayData[i],sinceReboot[j])+value))<<endl;
+
+        }
+
+
+    }
+
+    int maxx;
+    int rebootday;
+    for(int i =0; i<=days; i++)
+    {
+
+        if(maxx<optSolution[days][i])
+        {
+            maxx = optSolution[days][i];
+            rebootday = i;
+        }
+
+    }
+
+    cout<<endl;
+    cout<<"OptSolution is : " << maxx<<"  in the day: "<< rebootday<<endl;
+
+    vector<int> processdata(11);
+    //processdata.push_back(0);
+
+    for(int i=0;i<=10;i++)
+    {
+        if(i< rebootday){
+            processdata[i]=(min(dayData[i],sinceReboot[i]));
+        }
+        if(i==rebootday){
+            processdata[i]=0;
+        }
+        if(i> rebootday){
+            processdata[i] = min(dayData[i],sinceReboot[i-rebootday]);
+        }
+
+    }
+
+
+    for(int i=0;i<=days;i++){
+        cout<<processdata[i]<<endl;
+    }
+}
+
 OptData::OptData(int days, vector<int> dayData, vector<int> sinceReboot){
     this->days = days;
     // populate day 0 with 0 processing

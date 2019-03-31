@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DynamicProgrammingProject.dir/main.cpp.obj"
-  "CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.obj"
+  "CMakeFiles/DynamicProgrammingProject.dir/main.cpp.o"
+  "CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o"
   "DynamicProgrammingProject.pdb"
-  "DynamicProgrammingProject.exe"
-  "DynamicProgrammingProject.exe.manifest"
-  "libDynamicProgrammingProject.dll.a"
+  "DynamicProgrammingProject"
 )
 
 # Per-language clean rules from dependency scanning.
