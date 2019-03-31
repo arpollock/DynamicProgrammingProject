@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DynamicProgrammingProject.dir/main.cpp.o"
-  "CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o"
+  "CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o"
+  "CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o"
   "DynamicProgrammingProject.pdb"
   "DynamicProgrammingProject"
 )

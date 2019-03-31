@@ -6,27 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.h
+/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.cpp
+DPSolution.h
+/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.h
+
+/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.h
 vector
 -
 algorithm
 -
-iomanip
--
 iostream
 -
-fstream
+set
 -
-string
+utility
 -
-map
--
-
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/main.cpp
-iostream
--
-vector
--
-OptData.h
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.h
 

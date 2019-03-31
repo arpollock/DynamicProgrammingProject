@@ -80,10 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.cpp">
+		<Unit filename="/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.cpp">
 			<Option target="DynamicProgrammingProject"/>
 		</Unit>
-		<Unit filename="/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.h">
+		<Unit filename="/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.h">
+			<Option target="DynamicProgrammingProject"/>
+		</Unit>
+		<Unit filename="/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/ExhaustiveSearchSolution.cpp">
+			<Option target="DynamicProgrammingProject"/>
+		</Unit>
+		<Unit filename="/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/ExhaustiveSearchSolution.h">
 			<Option target="DynamicProgrammingProject"/>
 		</Unit>
 		<Unit filename="/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/main.cpp">

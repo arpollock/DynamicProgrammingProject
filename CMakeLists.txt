@@ -3,4 +3,4 @@ project(DynamicProgrammingProject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DynamicProgrammingProject main.cpp OptData.cpp OptData.h)
+add_executable(DynamicProgrammingProject main.cpp ExhaustiveSearchSolution.cpp ExhaustiveSearchSolution.h DPSolution.cpp DPSolution.h)

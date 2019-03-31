@@ -123,32 +123,59 @@ DynamicProgrammingProject/fast:
 	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/build
 .PHONY : DynamicProgrammingProject/fast
 
-OptData.o: OptData.cpp.o
+DPSolution.o: DPSolution.cpp.o
 
-.PHONY : OptData.o
+.PHONY : DPSolution.o
 
 # target to build an object file
-OptData.cpp.o:
-	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o
-.PHONY : OptData.cpp.o
+DPSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o
+.PHONY : DPSolution.cpp.o
 
-OptData.i: OptData.cpp.i
+DPSolution.i: DPSolution.cpp.i
 
-.PHONY : OptData.i
+.PHONY : DPSolution.i
 
 # target to preprocess a source file
-OptData.cpp.i:
-	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.i
-.PHONY : OptData.cpp.i
+DPSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.i
+.PHONY : DPSolution.cpp.i
 
-OptData.s: OptData.cpp.s
+DPSolution.s: DPSolution.cpp.s
 
-.PHONY : OptData.s
+.PHONY : DPSolution.s
 
 # target to generate assembly for a file
-OptData.cpp.s:
-	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.s
-.PHONY : OptData.cpp.s
+DPSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.s
+.PHONY : DPSolution.cpp.s
+
+ExhaustiveSearchSolution.o: ExhaustiveSearchSolution.cpp.o
+
+.PHONY : ExhaustiveSearchSolution.o
+
+# target to build an object file
+ExhaustiveSearchSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o
+.PHONY : ExhaustiveSearchSolution.cpp.o
+
+ExhaustiveSearchSolution.i: ExhaustiveSearchSolution.cpp.i
+
+.PHONY : ExhaustiveSearchSolution.i
+
+# target to preprocess a source file
+ExhaustiveSearchSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.i
+.PHONY : ExhaustiveSearchSolution.cpp.i
+
+ExhaustiveSearchSolution.s: ExhaustiveSearchSolution.cpp.s
+
+.PHONY : ExhaustiveSearchSolution.s
+
+# target to generate assembly for a file
+ExhaustiveSearchSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/DynamicProgrammingProject.dir/build.make CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.s
+.PHONY : ExhaustiveSearchSolution.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... DynamicProgrammingProject"
-	@echo "... OptData.o"
-	@echo "... OptData.i"
-	@echo "... OptData.s"
+	@echo "... DPSolution.o"
+	@echo "... DPSolution.i"
+	@echo "... DPSolution.s"
+	@echo "... ExhaustiveSearchSolution.o"
+	@echo "... ExhaustiveSearchSolution.i"
+	@echo "... ExhaustiveSearchSolution.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

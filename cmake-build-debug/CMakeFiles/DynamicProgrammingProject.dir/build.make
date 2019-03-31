@@ -70,32 +70,47 @@ CMakeFiles/DynamicProgrammingProject.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DynamicProgrammingProject.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/main.cpp -o CMakeFiles/DynamicProgrammingProject.dir/main.cpp.s
 
-CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o: CMakeFiles/DynamicProgrammingProject.dir/flags.make
-CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o: ../OptData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o -c /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.cpp
+CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o: CMakeFiles/DynamicProgrammingProject.dir/flags.make
+CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o: ../ExhaustiveSearchSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o -c /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/ExhaustiveSearchSolution.cpp
 
-CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.cpp > CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.i
+CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/ExhaustiveSearchSolution.cpp > CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.i
 
-CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/OptData.cpp -o CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.s
+CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/ExhaustiveSearchSolution.cpp -o CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.s
+
+CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o: CMakeFiles/DynamicProgrammingProject.dir/flags.make
+CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o: ../DPSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o -c /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.cpp
+
+CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.cpp > CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.i
+
+CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.cpp -o CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.s
 
 # Object files for target DynamicProgrammingProject
 DynamicProgrammingProject_OBJECTS = \
 "CMakeFiles/DynamicProgrammingProject.dir/main.cpp.o" \
-"CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o"
+"CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o" \
+"CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o"
 
 # External object files for target DynamicProgrammingProject
 DynamicProgrammingProject_EXTERNAL_OBJECTS =
 
 DynamicProgrammingProject: CMakeFiles/DynamicProgrammingProject.dir/main.cpp.o
-DynamicProgrammingProject: CMakeFiles/DynamicProgrammingProject.dir/OptData.cpp.o
+DynamicProgrammingProject: CMakeFiles/DynamicProgrammingProject.dir/ExhaustiveSearchSolution.cpp.o
+DynamicProgrammingProject: CMakeFiles/DynamicProgrammingProject.dir/DPSolution.cpp.o
 DynamicProgrammingProject: CMakeFiles/DynamicProgrammingProject.dir/build.make
 DynamicProgrammingProject: CMakeFiles/DynamicProgrammingProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable DynamicProgrammingProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable DynamicProgrammingProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DynamicProgrammingProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

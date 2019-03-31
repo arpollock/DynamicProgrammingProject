@@ -2,40 +2,7 @@
 // Created by Alex Pollock on 2019-03-17.
 //
 
-#include "OptData.h"
-
-void findOptimalRebootSchedule(int days, vector<int> dayData, vector<int> rebootData){
-    int dataProcessed = recursiveFindMax(days, dayData, rebootData);
-    cout << "*-*-*-*-*-*-*-*-*" <<endl;
-    cout << dataProcessed << endl;
-    cout << "*-*-*-*-*-*-*-*-*" <<endl;
-    return;
-}
-
-int recursiveFindMax(int days, vector<int> dayData, vector<int> rebootData){
-    if( days == 0 ){ // cannot process data on the 0th days
-        return 0;
-    }
-
-    int maxData = 0;
-    for(int i = 0; i <= days; i++){
-
-        int currVal = recursiveFindMax(i-1, dayData, rebootData) + sumDaysLeft(i, days, dayData, rebootData);
-        if(currVal > maxData){
-            maxData = currVal;
-        }
-
-    }
-    return maxData;
-}
-
-int sumDaysLeft(int lastRebootDayNum, int totDays, vector<int> dayData, vector<int> rebootData){
-    int totDataProc = 0;
-    for(int j = lastRebootDayNum+1; j<=totDays; j++){
-        totDataProc += min( dayData.at(j-1), rebootData.at(j-lastRebootDayNum-1) );
-    }
-    return totDataProc;
-}
+#include "ExhaustiveSearchSolution.h"
 
 void printDataProcessed(int days, vector<int> inputDayData, vector<int> inputSinceReboot){
 
@@ -137,7 +104,7 @@ void printDataProcessed(int days, vector<int> inputDayData, vector<int> inputSin
     }
 }
 
-OptData::OptData(int days, vector<int> dayData, vector<int> sinceReboot){
+ExhaustiveSearchSolution::ExhaustiveSearchSolution(int days, vector<int> dayData, vector<int> sinceReboot){
     this->days = days;
     // populate day 0 with 0 processing
     this->dayData.push_back(0);
@@ -149,7 +116,7 @@ OptData::OptData(int days, vector<int> dayData, vector<int> sinceReboot){
     fillTable();
 }
 
-void OptData::fillTable(){
+void ExhaustiveSearchSolution::fillTable(){
     // fill row i=0 with all 0s
     // represents reboot everyday case
     vector<int> rowZero;
@@ -174,7 +141,7 @@ void OptData::fillTable(){
 
 }
 
-void OptData::printDataProcessed(){
+void ExhaustiveSearchSolution::printDataProcessed(){
     for(int i=0; i<dataProcessed.size() ; i++){
         for(int j=0; j< dataProcessed.at(i).size(); j++) {
             cout << setw(3) << dataProcessed[i][j] << "|";
@@ -183,7 +150,7 @@ void OptData::printDataProcessed(){
     }
 }
 
-void OptData::outputOptimalSolution(){
+void ExhaustiveSearchSolution::outputOptimalSolution(){
     int sum = 0;
     for(int ele: optimalSolution){
         sum += ele;
@@ -208,7 +175,7 @@ void OptData::outputOptimalSolution(){
 
 }
 
-int OptData::amountProcessed(int i, int j, string r){
+int ExhaustiveSearchSolution::amountProcessed(int i, int j, string r){
 
     if(traverseValues.count(r)>0) return traverseValues[r]; // already calculated case
 
@@ -230,7 +197,7 @@ int OptData::amountProcessed(int i, int j, string r){
     return traverseValues.at(r);
 }
 
-void OptData::findPossibleSolutions(){
+void ExhaustiveSearchSolution::findPossibleSolutions(){
     amountProcessed(0,0,"");
     traceback();
     outputOptimalSolution();
@@ -248,7 +215,7 @@ void OptData::findPossibleSolutions(){
 }
 
 
-void OptData::traceback(){
+void ExhaustiveSearchSolution::traceback(){
     int maxV=-1;
     string maxKey="None Found";
 
