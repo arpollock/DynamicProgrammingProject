@@ -19,13 +19,11 @@ int main() {
     easyS.push_back(4);
     easyS.push_back(2);
     easyS.push_back(1);
-    //ExhaustiveSearchSolution easyBruteTest(easyDays, easyX, easyS);
-    //easyBruteTest.printDataProcessed();
-    //easyBruteTest.findPossibleSolutions();
 
     DPSolution easyTest(easyX, easyS);
     easyTest.findOptimalRebootSchedule();
-    cout << endl;
+
+    cout << endl << endl;
 
     // IMPLEMENTATION TEST CASE
     int impDays = 10;
@@ -51,13 +49,11 @@ int main() {
     impS.push_back(15); // day 8
     impS.push_back(10); // day 9
     impS.push_back(5); // day 10
-    //ExhaustiveSearchSolution impBruteTest(impDays, impX, impS);
-    //impBruteTest.printDataProcessed();
-    //impBruteTest.findPossibleSolutions();
-    //printDataProcessed(impDays, impX, impS);
+
     DPSolution impTest(impX, impS);
     impTest.findOptimalRebootSchedule();
-    cout<<endl;
+
+    cout << endl << endl;
 
     // two reboot test case
     vector<int> twoX;

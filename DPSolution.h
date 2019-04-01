@@ -10,6 +10,7 @@
 #include <iostream>
 #include <set>
 #include <utility>
+#include <stack>
 
 using namespace std;
 
@@ -28,7 +29,7 @@ private:
     vector<int> dayData;
     vector<int> rebootData;
     vector<int> optValTable;
-    set<int> rebootDays; // TODO: fix tracking & traceback logic
+    vector<int> rebootDays; // TODO: fix tracking & traceback logic
 };
 
 

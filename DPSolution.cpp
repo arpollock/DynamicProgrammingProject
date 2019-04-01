@@ -9,12 +9,14 @@ DPSolution::DPSolution(vector<int> dayData,vector<int> rebootData){
     this->rebootData = rebootData;
     vector<int> tempData(dayData.size()+1, -1);
     optValTable = tempData;
+    vector<int> tempReboot(optValTable.size(), 0);
+    rebootDays = tempReboot;
 }
 
 void DPSolution::findOptimalRebootSchedule(){
     int maxDataProc = recursiveFindMax(dayData.size());
-    cout << maxDataProc << endl;
-    traceback();
+    cout << maxDataProc << endl;traceback();
+
 }
 
 int DPSolution::recursiveFindMax(int days){
@@ -39,16 +41,9 @@ int DPSolution::recursiveFindMax(int days){
         }
     } // end for loop
 
-    if( rebootOn != 0 ){
-        // rebootDays.clear(); // UNCOMMENT THIS LINE TO GET CORRECT SOLUTION
-        // no clear gets right solution for two reboot case, clear gets right solution for implementation case
-        // overall solution will come from identifying when a reboot is needed and when it isnt AFTER it is inserted (?)
-        // clearing gets the right answer but I don't think it's right
-        // will fail when opt solution is more than one reboot
-        rebootDays.insert(rebootOn);
-    }
+    rebootDays.at(days) = rebootOn;
 
-    cout << "Days: " << days << " DataProc: " << maxData << " Reboot on: " << rebootOn << endl;
+    //cout << "Days: " << days << " DataProc: " << maxData << " Reboot on: " << rebootOn << endl;
     return maxData;
 }
 
@@ -61,22 +56,28 @@ int DPSolution::sumDaysLeft(int lastRebootDayNum, int totDays){
 }
 
 void DPSolution::traceback(){
-//    cout << "Reboot days: ";
-//    for(int ele: rebootDays){
-//        cout << ele << " " ;
-//    }
-//    cout << endl;
-
-    int j = 0;
-    for( int i = 0; i<dayData.size(); i++){
+    int days = dayData.size();
+    int currRebootPosition = days;
+    int j = days-rebootDays.at(currRebootPosition)-1;
+    stack<int> toPrint;
+    for( int i = days-1; i>=0; i--){
+        // PRINT DEBUG:
+        //cout << "CurrRebootPos: " << currRebootPosition << " i: " << i << " j: "<< j << endl;
         int dataProc = 0;
-        if( rebootDays.count(i+1) == 0 ){ // not a reboot day
+        if( rebootDays.at(currRebootPosition) == (i+1) ){ // a reboot day
+            int newPos = rebootDays.at(currRebootPosition)-1;
+            currRebootPosition = newPos;
+            j = i-rebootDays.at(currRebootPosition)-1;
+        }else{ // not a reboot day
             dataProc = min( dayData.at(i), rebootData.at(j) );
-            j++;
-        }else{
-            j = 0;
+            j--;
         }
-        cout << dataProc << " ";
+        toPrint.push(dataProc);
     }
-    cout << endl;
+
+    while(!toPrint.empty()){
+        int ele = toPrint.top();
+        toPrint.pop();
+        cout << ele << " ";
+    }
 }
