@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include "ExhaustiveSearchSolution.h"
 #include "DPSolution.h"
 
 using namespace std;

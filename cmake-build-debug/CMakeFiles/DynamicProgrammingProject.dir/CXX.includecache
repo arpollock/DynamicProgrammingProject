@@ -24,29 +24,11 @@ utility
 stack
 -
 
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/ExhaustiveSearchSolution.h
-vector
--
-algorithm
--
-iomanip
--
-iostream
--
-fstream
--
-string
--
-map
--
-
 /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/main.cpp
 iostream
 -
 vector
 -
-ExhaustiveSearchSolution.h
-/Users/arpollock/Dropbox/C++/DynamicProgrammingProject/ExhaustiveSearchSolution.h
 DPSolution.h
 /Users/arpollock/Dropbox/C++/DynamicProgrammingProject/DPSolution.h
 

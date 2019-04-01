@@ -14,10 +14,6 @@
 
 using namespace std;
 
-void findOptimalRebootSchedule(int days, vector<int> dayData, vector<int> rebootData);
-int recursiveFindMax(int days, vector<int> dayData, vector<int> rebootData);
-int sumDaysLeft(int lastRebootDayNum, int totDays, vector<int> dayData, vector<int> rebootData);
-
 class DPSolution {
 public:
     DPSolution(vector<int> dayData,vector<int> rebootData);
@@ -29,7 +25,7 @@ private:
     vector<int> dayData;
     vector<int> rebootData;
     vector<int> optValTable;
-    vector<int> rebootDays; // TODO: fix tracking & traceback logic
+    vector<int> rebootDays;
 };
 
 
